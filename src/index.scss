@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "IBMPlex-Regular";
+  src: url(../src/assets/fonts/IBMPlexMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Raleway-ExtraBold";
+  src: url(../src/assets/fonts/Raleway-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "IBMPlex-SemiBold";
+  src: url(../src/assets/fonts/IBMPlexMono-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "IBMPlex-Bold";
+  src: url(../src/assets/fonts/IBMPlexMono-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

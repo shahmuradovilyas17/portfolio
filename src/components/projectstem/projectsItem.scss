@@ -1,0 +1,34 @@
+@import url("../../index.scss");
+
+.projects-item {
+  margin: 0 auto;
+  max-width: 530px;
+
+  .projects-item-name {
+    font-family: "Raleway-ExtraBold";
+    font-size: 24px;
+    color: #080808;
+    margin-bottom: 20px;
+  }
+
+  .projects-item-desc {
+    font-family: "IBMPlex-Regular";
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1%;
+    color: #9c9c9c;
+    margin-bottom: 20px;
+  }
+  .project-image {
+    border-radius: 2%;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  a {
+    display: inline-block;
+    img {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+}

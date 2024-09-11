@@ -1,0 +1,51 @@
+@import url("../../index.scss");
+
+.about-menu-wrapper {
+  background-color: #080808;
+  padding-top: 80px;
+  padding-bottom: 45px;
+
+  .about-menu-inner {
+    margin: 0 auto;
+    display: flex;
+    max-width: 910px;
+
+    img {
+      border-radius: 50%;
+    }
+
+    .about-menu-content {
+      max-width: 492px;
+      align-self: center;
+
+      .about-menu-name {
+        color: #ffffff;
+        font-size: 44px;
+        line-height: 51.66px;
+        margin-bottom: 20px;
+        font-family: "Raleway-ExtraBold";
+        font-size: 44px;
+      }
+
+      .about-menu-desc {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 1%;
+        color: #9c9c9c;
+        font-family: "IBMPlex-Regular";
+        margin-bottom: 30px;
+      }
+
+      .about-menu-button {
+        background-color: #3f8e00;
+        color: #ffffff;
+        font-family: "IBMPlex-Regular";
+        font-size: 16px;
+        line-height: 20.8px;
+        border: 1px solid #62ba1b;
+        border-radius: 4px;
+        padding: 21px 64px;
+      }
+    }
+  }
+}

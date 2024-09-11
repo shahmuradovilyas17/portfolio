@@ -1,0 +1,24 @@
+@import url("../../index.scss");
+
+.introduction-wrapper {
+  padding: 20px 0 20px 0;
+  background-color: #080808;
+  color: white;
+
+  .introduction-inner {
+    max-width: 1110px;
+    margin: 0 auto;
+
+    .introduction-title {
+      text-align: center;
+      font-family: "IBMPlex-Bold";
+      font-size: 36px;
+    }
+
+    .introduction-text {
+      text-align: center;
+      font-family: "IBMPlex-Bold";
+      font-size: 24px;
+    }
+  }
+}
