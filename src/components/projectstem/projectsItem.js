@@ -10,6 +10,7 @@ import {
 import inkHouseImg from "../../assets/images/inkHouse.png";
 import furnikingImg from "../../assets/images/Furniking.png";
 import githubImg from "../../assets/images/github.png";
+import "./projectsItem.scss";
 
 export const ProjectsItem = () => {
   const projects = [
@@ -36,26 +37,24 @@ export const ProjectsItem = () => {
         modules={[Navigation, Pagination, Autoplay, Keyboard, Mousewheel]}
         spaceBetween={50}
         slidesPerView={1}
-        // autoplay
+        autoplay
         keyboard
         mousewheel
         navigation
-        // pagination={{ clickable: true }}
+        pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
         {projects.map((item) => {
           return (
-            <SwiperSlide>
-              <div className="projects-item" key={item.id}>
-                <img src={item.img} alt={item.name} className="project-image" />
-                <div className="projects-item-name">{item.name}</div>
-                <div className="projects-item-desc">{item.desc}</div>
-                <a href={item.githubLink}>
-                  <img src={githubImg} alt="githubLink" />
-                </a>
-              </div>
+            <SwiperSlide className="projects-item" key={item.id}>
+              <img src={item.img} alt={item.name} className="project-image" />
+              <div className="projects-item-name">{item.name}</div>
+              <div className="projects-item-desc">{item.desc}</div>
+              <a href={item.githubLink}>
+                <img src={githubImg} alt="githubLink" />
+              </a>
             </SwiperSlide>
           );
         })}

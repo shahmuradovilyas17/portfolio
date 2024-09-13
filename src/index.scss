@@ -26,3 +26,27 @@ body {
   margin: 0;
   padding: 0;
 }
+
+#dark {
+  background-color: black;
+  color: whitesmoke;
+
+  &.theme {
+    background-image: url(./assets/images/dark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+#light {
+  background-color: white;
+  color: #080808;
+
+  &.theme {
+    background-image: url(./assets/images/light.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
