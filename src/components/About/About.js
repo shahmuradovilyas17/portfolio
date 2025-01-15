@@ -1,4 +1,5 @@
 import "./About.scss";
+import profPicture from "../../assets/images/ProfilePicture.png";
 
 export const About = () => {
   return (
@@ -12,7 +13,7 @@ export const About = () => {
           </div>
         </div>
         <div className="about-menu-img">
-          <img src alt="personImage" />
+          <img src={profPicture} alt="personImage" />
         </div>
       </div>
     </div>
