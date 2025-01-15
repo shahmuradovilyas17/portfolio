@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "./Header.scss";
 import { MainContext } from "../MainContext/MainContext";
 import { Navigation } from "../Navigation/Navigation";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const {
@@ -16,7 +17,9 @@ export const Header = () => {
   return (
     <div className="header-wrapper" id={themeState ? "dark" : "light"}>
       <div className="header-inner">
-        <div className="header-inner-logo">{textObj[languageState].logo}</div>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <div className="header-inner-logo">{textObj[languageState].logo}</div>
+        </Link>
         <div className="header-inner-right-bar">
           <Navigation />
           <div className="header-inner-right-bar-theme-language">
