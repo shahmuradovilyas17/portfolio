@@ -1,6 +1,7 @@
 import inkHouseImg from "../../assets/images/inkHouse.png";
 import furnikingImg from "../../assets/images/Furniking.png";
-import githubImg from "../../assets/images/github.png";
+import githubLightImg from "../../assets/images/github.png";
+import githubDarkImg from "../../assets/images/github-dark.png";
 import "./projectsItem.scss";
 import { useContext } from "react";
 import { MainContext } from "../MainContext/MainContext";
@@ -32,7 +33,7 @@ export const ProjectsItem = () => {
     },
   ];
 
-  const { textObj, languageState } = useContext(MainContext);
+  const { textObj, languageState, themeState } = useContext(MainContext);
 
   return (
     <>
@@ -43,7 +44,10 @@ export const ProjectsItem = () => {
             <div className="projects-item-name">{item.name}</div>
             <div className="projects-item-desc">{item.desc[languageState]}</div>
             <a href={item.githubLink}>
-              <img src={githubImg} alt="githubLink" />
+              <img
+                src={themeState ? githubDarkImg : githubLightImg}
+                alt="githubLink"
+              />
             </a>
           </div>
         );
