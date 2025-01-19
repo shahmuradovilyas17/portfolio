@@ -21,12 +21,12 @@ export const Abilities = () => {
     },
   };
 
-  const { themeState } = useContext(MainContext);
+  const { themeState, textObj, languageState } = useContext(MainContext);
 
   return (
     <div className="abilities-wrapper" id={themeState ? "dark" : "light"}>
       <div className="abilities-inner">
-        <div className="abilities-title">Skills</div>
+        <div className="abilities-title">{textObj[languageState].skills}</div>
         <SkillBar
           skills={skillList}
           height={30}

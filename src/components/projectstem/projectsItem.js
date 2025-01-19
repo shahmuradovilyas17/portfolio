@@ -1,16 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Autoplay,
-  Keyboard,
-  Mousewheel,
-} from "swiper/modules";
-
 import inkHouseImg from "../../assets/images/inkHouse.png";
 import furnikingImg from "../../assets/images/Furniking.png";
 import githubImg from "../../assets/images/github.png";
 import "./projectsItem.scss";
+import { useContext } from "react";
+import { MainContext } from "../MainContext/MainContext";
 
 export const ProjectsItem = () => {
   const projects = [
@@ -18,7 +11,11 @@ export const ProjectsItem = () => {
       id: 1,
       name: "InkHouse-React",
       githubLink: "https://github.com/shahmuradovilyas17/pticka",
-      desc: "online store selling paintings from countries such as France, Germany and England",
+      desc: {
+        EN: "online store selling paintings from countries such as France, Germany and England",
+        AZ: "Fransa, Almaniya və İngiltərə kimi ölkələrdən rəsmlər satan onlayn mağaza",
+        RU: "онлайн-магазин, продающий картины из стран, таких как Франция, Германия и Англия",
+      },
       img: inkHouseImg,
     },
     {
@@ -26,39 +23,31 @@ export const ProjectsItem = () => {
       name: "Furniking",
       githubLink:
         "https://github.com/shahmuradovilyas17/StepIt/tree/main/Furniking",
-      desc: "online store selling various home furniture",
+      desc: {
+        EN: "online store selling various home furniture",
+        AZ: "Müxtəlif ev mebeli satan onlayn mağaza",
+        RU: "онлайн-магазин, продающий различную домашнюю мебель",
+      },
       img: furnikingImg,
     },
   ];
 
+  const { textObj, languageState } = useContext(MainContext);
+
   return (
     <>
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay, Keyboard, Mousewheel]}
-        spaceBetween={50}
-        slidesPerView={1}
-        autoplay
-        keyboard
-        mousewheel
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        {projects.map((item) => {
-          return (
-            <SwiperSlide className="projects-item" key={item.id}>
-              <img src={item.img} alt={item.name} className="project-image" />
-              <div className="projects-item-name">{item.name}</div>
-              <div className="projects-item-desc">{item.desc}</div>
-              <a href={item.githubLink}>
-                <img src={githubImg} alt="githubLink" />
-              </a>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      {projects.map((item) => {
+        return (
+          <div className="projects-item" key={item.id}>
+            <img src={item.img} alt={item.name} className="project-image" />
+            <div className="projects-item-name">{item.name}</div>
+            <div className="projects-item-desc">{item.desc[languageState]}</div>
+            <a href={item.githubLink}>
+              <img src={githubImg} alt="githubLink" />
+            </a>
+          </div>
+        );
+      })}
     </>
   );
 };

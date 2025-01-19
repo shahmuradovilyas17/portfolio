@@ -4,17 +4,14 @@ import { MainContext } from "../MainContext/MainContext";
 import { useContext } from "react";
 
 export const About = () => {
-  const { themeState } = useContext(MainContext);
+  const { themeState, textObj, languageState } = useContext(MainContext);
 
   return (
     <div className="about-menu-wrapper" id={themeState ? "dark" : "light"}>
       <div className="about-menu-inner">
         <div className="about-menu-content">
-          <div className="about-menu-name">Shakhmuradov Ilyas</div>
-          <div className="about-menu-desc">
-            FrontEnd Developer. Student in National Aviation Academy of
-            Azerbaijan
-          </div>
+          <div className="about-menu-name">{textObj[languageState].name}</div>
+          <div className="about-menu-desc">{textObj[languageState].desc}</div>
         </div>
         <div className="about-menu-img">
           <img src={profPicture} alt="personImage" />
