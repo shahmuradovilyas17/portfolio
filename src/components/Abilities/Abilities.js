@@ -1,5 +1,7 @@
 import SkillBar from "react-skillbars";
 import "./Abilities.scss";
+import { useContext } from "react";
+import { MainContext } from "../MainContext/MainContext";
 
 export const Abilities = () => {
   const skillList = [
@@ -19,8 +21,10 @@ export const Abilities = () => {
     },
   };
 
+  const { themeState } = useContext(MainContext);
+
   return (
-    <>
+    <div className="abilities-wrapper" id={themeState ? "dark" : "light"}>
       <div className="abilities-inner">
         <div className="abilities-title">Skills</div>
         <SkillBar
@@ -30,6 +34,7 @@ export const Abilities = () => {
           symbolColor={"#3498db"}
         />
       </div>
-    </>
+      <div />
+    </div>
   );
 };

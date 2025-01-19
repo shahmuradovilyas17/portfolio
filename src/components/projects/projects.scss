@@ -1,25 +1,28 @@
-.projects-menu-inner {
-  margin: 0 auto;
-  max-width: 1110px;
-  margin-bottom: 50px;
-  margin-top: 80px;
+.projects-menu-wrapper {
+  padding-bottom: 50px;
+  padding-top: 80px;
 
-  .projects-menu-title {
-    text-align: center;
-    font-family: "Raleway-ExtraBold";
-    font-size: 34px;
-    color: #080808;
-    margin-bottom: 10px;
-  }
-
-  .projects-menu-desc {
-    max-width: 570px;
+  .projects-menu-inner {
     margin: 0 auto;
-    font-family: "IBMPlex-Regular";
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 1%;
-    color: #9c9c9c;
-    margin-bottom: 60px;
+    max-width: 1110px;
+
+    .projects-menu-title {
+      text-align: center;
+      font-family: "Raleway-ExtraBold";
+      font-size: 34px;
+      color: currentColor;
+      margin-bottom: 10px;
+    }
+
+    .projects-menu-desc {
+      max-width: 570px;
+      margin: 0 auto;
+      font-family: "IBMPlex-Regular";
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 1%;
+      color: currentColor;
+      margin-bottom: 60px;
+    }
   }
 }

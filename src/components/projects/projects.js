@@ -1,12 +1,21 @@
-import "./projects.scss"
-import { ProjectsItem } from '../projectstem/projectsItem';
+import "./projects.scss";
+import { ProjectsItem } from "../projectstem/projectsItem";
+import { useContext } from "react";
+import { MainContext } from "../MainContext/MainContext";
 
 export const ProjectsMenu = () => {
-    return (
-        <div className="projects-menu-inner">
-            <div className="projects-menu-title">Projects</div>
-            <div className="projects-menu-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-            <ProjectsItem/>
+  const { themeState } = useContext(MainContext);
+
+  return (
+    <div className="projects-menu-wrapper" id={themeState ? "dark" : "light"}>
+      <div className="projects-menu-inner">
+        <div className="projects-menu-title">Projects</div>
+        <div className="projects-menu-desc">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
         </div>
-    )
-}
+        <ProjectsItem />
+      </div>
+    </div>
+  );
+};

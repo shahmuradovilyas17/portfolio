@@ -1,7 +1,7 @@
 @import url("../../index.scss");
 
 .about-menu-wrapper {
-  background-color: #080808;
+  background-color: currentColor;
   padding-top: 80px;
   padding-bottom: 45px;
 
@@ -27,7 +27,7 @@
       align-self: center;
 
       .about-menu-name {
-        color: #ffffff;
+        color: currentColor;
         font-size: 44px;
         line-height: 51.66px;
         margin-bottom: 20px;
@@ -39,20 +39,9 @@
         font-size: 14px;
         line-height: 24px;
         letter-spacing: 1%;
-        color: #9c9c9c;
+        color: currentColor;
         font-family: "IBMPlex-Regular";
         margin-bottom: 30px;
-      }
-
-      .about-menu-button {
-        background-color: #3f8e00;
-        color: #ffffff;
-        font-family: "IBMPlex-Regular";
-        font-size: 16px;
-        line-height: 20.8px;
-        border: 1px solid #62ba1b;
-        border-radius: 4px;
-        padding: 21px 64px;
       }
     }
   }
