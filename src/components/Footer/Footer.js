@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import "./Footer.scss";
+import { MainContext } from "../MainContext/MainContext";
 
 export const Footer = () => {
+  const { themeState } = useContext(MainContext);
+
   return (
-    <div className="footer-wrapper">
+    <div className="footer-wrapper" id={themeState ? "dark" : "light"}>
       <div className="footer-inner">
         <ul>
           <li>
