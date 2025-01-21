@@ -5,6 +5,9 @@ import githubDarkImg from "../../assets/images/github-dark.png";
 import "./projectsItem.scss";
 import { useContext } from "react";
 import { MainContext } from "../MainContext/MainContext";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard, Mousewheel, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css";
 
 export const ProjectsItem = () => {
   const projects = [
@@ -33,25 +36,37 @@ export const ProjectsItem = () => {
     },
   ];
 
-  const { textObj, languageState, themeState } = useContext(MainContext);
+  const { languageState, themeState } = useContext(MainContext);
 
   return (
     <>
-      {projects.map((item) => {
-        return (
-          <div className="projects-item" key={item.id}>
-            <img src={item.img} alt={item.name} className="project-image" />
-            <div className="projects-item-name">{item.name}</div>
-            <div className="projects-item-desc">{item.desc[languageState]}</div>
-            <a href={item.githubLink}>
-              <img
-                src={themeState ? githubDarkImg : githubLightImg}
-                alt="githubLink"
-              />
-            </a>
-          </div>
-        );
-      })}
+      <Swiper
+        modules={[Navigation, Keyboard, Mousewheel, Autoplay]}
+        spaceBetween={50}
+        slidesPerView={1}
+        keyboard
+        mousewheel
+        navigation
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+      >
+        {projects.map((item) => {
+          return (
+            <SwiperSlide className="projects-item" key={item.id}>
+              <img src={item.img} alt={item.name} className="project-image" />
+              <div className="projects-item-name">{item.name}</div>
+              <div className="projects-item-desc">
+                {item.desc[languageState]}
+              </div>
+              <a href={item.githubLink}>
+                <img
+                  src={themeState ? githubDarkImg : githubLightImg}
+                  alt="githubLink"
+                />
+              </a>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </>
   );
 };

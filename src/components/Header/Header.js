@@ -13,7 +13,6 @@ export const Header = () => {
     setLanguageState,
   } = useContext(MainContext);
 
-  console.log(languageState);
   return (
     <div className="header-wrapper" id={themeState ? "dark" : "light"}>
       <div className="header-inner">
