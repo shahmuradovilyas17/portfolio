@@ -22,9 +22,22 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+#root {
+  position: relative;
+  min-height: 100%;
+  height: auto;
+  background-color: currentColor;
+  padding-bottom: 71px;
 }
 
 #dark {

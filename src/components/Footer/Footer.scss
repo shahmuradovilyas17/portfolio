@@ -1,10 +1,13 @@
 .footer-wrapper {
   background-color: currentColor;
-  padding: 26px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 
   .footer-inner {
     max-width: 1110px;
     margin: 0 auto;
+    padding: 26px 95px;
   }
 }
 

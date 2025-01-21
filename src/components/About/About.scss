@@ -2,13 +2,13 @@
 
 .about-menu-wrapper {
   background-color: currentColor;
-  padding-top: 80px;
-  padding-bottom: 45px;
 
   .about-menu-inner {
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
     max-width: 910px;
+    padding: 80px 15px 45px 15px;
 
     .about-menu-img {
       width: 300px;
