@@ -34,6 +34,7 @@ export const Header = () => {
             <select
               name="language"
               className="language"
+              id={themeState ? "dark" : "light"}
               onChange={(event) => {
                 setLanguageState(event.target.value);
               }}
