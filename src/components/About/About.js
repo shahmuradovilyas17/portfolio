@@ -1,5 +1,5 @@
 import "./About.scss";
-import profPicture from "../../assets/images/ProfilePicture.png";
+import profPicture from "../../assets/images/ProfilePicture.jpg";
 import { MainContext } from "../MainContext/MainContext";
 import { useContext } from "react";
 
